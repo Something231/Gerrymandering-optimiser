@@ -22,4 +22,4 @@ class Cell:
                 elif d < closest_distance:
                     closest_distance = d
                     closest_id = n
-            self.votes[n] += 1
+            self.votes[closest_id] += 1
