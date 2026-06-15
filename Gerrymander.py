@@ -11,4 +11,9 @@ def verify_possible(districts, est_tally, e_size, w) -> bool:  #quick check to s
         return False
 
 def simple_attempt(districts):
-    pass
+    s = districts.shape
+    simplified = np.zeros(s)
+    for y in range(s[0]):
+        for x in range(s[1]):
+            simplified[y][x] = districts[y][x].affiliation
+    pass #to add a 'packing/cracking' algorithm but need time to think how

@@ -24,8 +24,9 @@ for y in range(sizeY):
         rot = np.random.uniform(-0.5, 0.5)
         map[y][x] = Cell(np.array([random.uniform(-9, 9), random.uniform(-9, 9)]), np.array([[stdx**2, stdx*stdy*rot], [stdy*stdx*rot, stdy**2]]), 500)
         map[y][x].assign_votes(p)
+        map[y][x].affiliate()
         c = 'green'
-        if map[y][x].votes[0] > map[y][x].votes[1]:
+        if map[y][x].affiliation == 1:
             c = 'orange'
             est_tally[0] += 1
         else:
