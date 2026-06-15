@@ -18,7 +18,7 @@ class Cell:
             for n, q in enumerate(parties):
                 d = np.linalg.norm(q - p)
                 if d == closest_distance:
-                    exit()
+                    exit() #idk what to do here yet
                 elif d < closest_distance:
                     closest_distance = d
                     closest_id = n
